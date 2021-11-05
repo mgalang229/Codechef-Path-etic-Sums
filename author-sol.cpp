@@ -13,8 +13,7 @@ void Dfs(int u, int p) {
 	// value of the current node depends on the value of previous node
 	nums[u] = (nums[p] & 1 ? 2 : 1);
 	for (auto v : graph[u]) {
-		// avoid performing depth-first search to the previous node
-		// because it is already visited
+		// avoid performing depth-first search to the previous node because it is already visited
 		if (v != p) {
 			Dfs(v, u);
 		}
